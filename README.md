@@ -1,7 +1,4 @@
-# Libft - @42Born2Code
-<img src="https://github.com/vvarodi/libft_42/blob/master/Libft.JPG" />
-
-![Text](https://snipboard.io/DuJ8ON.jpg)
+# Libft
 
 ### TOC
 * [What is libft?](#what-is-libft)
@@ -53,7 +50,7 @@ Libc functions | Additional functions | Bonus Functions | Personal Functions
 [ft_tolower](#ft_tolower)	|   | | 
 [ft_calloc](#ft_calloc)     |   | |
 
-## [ft_memset](libft/ft_memset.c)
+## [ft_memset](libft/src/ft_memset.c)
 
 `void       *ft_memset(void *s, int c, size_t len)`
 
@@ -61,7 +58,7 @@ Description | Param. #1 | Param. #2 | Param. #3 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------: | :-----------:
 Fill with "len" bytes of "c" the memory of "s"| The string on which to operate | Value c (converted to an unsigned char) | The number of bytes | A pointer to the memory area s
 
-## [ft_bzero](libft/ft_bzero.c)
+## [ft_bzero](libft/src/ft_bzero.c)
 
 `void       *ft_bzero(void *s,  size_t n)`
 
@@ -69,7 +66,7 @@ Description | Param. #1 | Param. #2 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------:
  Erases the data in the "n" bytes of the memory starting at the location pointed by "s" writing zeroes | The string on which to operate | The number of bytes | None
 
- ## [ft_memcpy](libft/ft_memcpy.c)
+ ## [ft_memcpy](libft/src/ft_memcpy.c)
 
 `void       *ft_memcpy(void *dst, const void *src, size_t n)`
 
