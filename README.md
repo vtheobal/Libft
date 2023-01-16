@@ -7,7 +7,7 @@
 
 ### What is libft?
 
-Libft is an individual project at [42][1] that requieres us to re-create some standard C library functions for future projects, and have a deeper understanding of data structures and basic algorithms. At 42 we are not allowed to use some standard libraries on our projects, so we have to keep growing this libary with our own functions as we go farther in the program.
+Libft is an individual project at [42] that requieres us to re-create some standard C library functions for future projects, and have a deeper understanding of data structures and basic algorithms. At 42 we are not allowed to use some standard libraries on our projects, so we have to keep growing this libary with our own functions as we go farther in the program.
 
 ### What's in it?
 
@@ -23,7 +23,7 @@ Libc functions | Additional functions | Bonus Functions | Personal Functions
 :----------- | :-----------: | :-----------: | -----------:
 [ft_memset](#ft_memset)		|[ft_substr](#ft_substr)    | [ft_lstnew](#ft_lstnew)            | [ft_islower](#ft_islower) 
 [ft_bzero](#ft_bzero)		|[ft_strjoin](#ft_strjoin)  | [ft_lstadd_front](#ft_lstadd_front)| [ft_isupper](#ft_isupper) 
-[ft_memcpy](#ft_memcpy)		|[ft_strtrim](#ft_strjoin)  | [ft_lstsize](#ft_lstsize)          | [ft_isspace](#ft_isspace)   
+[ft_memcpy](#ft_memcpy)		|[ft_strtrim](#ft_strtrim)  | [ft_lstsize](#ft_lstsize)          | [ft_isspace](#ft_isspace)   
 [ft_memccpy](#ft_memccpy)	|[ft_split](#ft_split)      | [ft_lstlast](#ft_lstlast)          | [ft_strndup](#ft_strndup)
 [ft_memmove](#ft_memmove)	|[ft_itoa](#ft_itoa)       | [ft_lstadd_back](#ft_lstadd_back)  | [ft_strcdup](#ft_strcdup)
 [ft_memchr](#ft_memchr)		|[ft_strmapi](#ft_strmapi)  | [ft_lstdelone](#ft_lstdelone)     | 
@@ -297,8 +297,9 @@ Description | Param. #1 | Param. #2 | Return Value
 
 ## Additional functions
 
+
 ### [ft_substr](libft/src/ft_substr.c)
-`char   *ft_substr(char const *s, unsigned int start, size_t len)`
+`char       *ft_substr(char const *s, unsigned int start, size_t len)`
 
 Description | Param. #1 | Param. #2 | Param. #3 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------: | :-----------:
@@ -306,7 +307,7 @@ Allocates (with malloc) and returns a substring from the string given in argumen
 
 ### [ft_strjoin](libft/src/ft_strjoin.c)
 
-`char *ft_strjoin(char const *s1, char const *s2)`
+`char       *ft_strjoin(char const *s1, char const *s2)`
 
 Description | Param. #1 | Param. #2 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------:
@@ -314,15 +315,15 @@ Allocates (with malloc) and returns a new string, result of the concatenation of
 
 ### [ft_strtrim](libft/src/ft_strtrim.c)
 
-`char *ft_strjoin(char const *s1, char const *s2)`
+`char       *ft_strjoin(char const *s1, char const *s2)`
 
 Description | Param. #1 | Param. #2 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------:
 Allocates (with malloc) and returns a copy of the string given as argument without the characters specified in the set argument at the beginning and the end of the string|The string to be trimmed |The reference set of character to trim | The trimmed string. NULL if the allocation fails
 
-### [ft_strsplit](libft/src/ft_strsplit.c)
+### [ft_split](libft/src/ft_split.c)
 
-`char **ft_split(char const *s, char c)`
+`char       **ft_split(char const *s, char c)`
 
 Description | Param. #1 | Param. #2 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------:
@@ -330,27 +331,130 @@ Allocates (with malloc) and returns  an array of strings obtained by splitting s
 
 ### [ft_strmapi](libft/src/ft_strmapi.c)
 
-`char *ft_strmapi(char const *s, char (*f)(unsigned int, char))`
+`char       *ft_strmapi(char const *s, char (*f)(unsigned int, char))`
 
 Description | Param. #1 | Param. #2 | Return Value
 :-----------: | :-----------: | :-----------: | :-----------:
 Applies the function f to each character of the string passed as argument to create a new string (with malloc) resulting from successive applications of f |The string on which to iterate| The function to apply to each character| The string created from the successive applications of f. Returns NULL if the allocation fails
 
-### [ft_atoi](libft/src/ft_atoi.c)
+### [ft_itoa](libft/src/ft_itoa.c)
 
-`char   ft_itoa(int n)`
+`char       ft_itoa(int n)`
 
 Description | Param. #1 | Return Value
 :-----------: | :-----------: | :-----------:
 Allocates (with malloc) and returns a string representing the integer received as an argument. Negative numbers must be handled | The integer to convert | The string representing the integer. NULL if the allocation fails.
 
+### [ft_putchar_fd](libft/src/ft_putchar_fd.c)
+
+`void	    ft_putchar_fd(char c, int fd)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Outputs the character at the given descriptor. | character to output | file descriptor | None
+
+### [ft_putstr_fd](libft/src/ft_putstr_fd.c)
+
+`void	    ft_putstr_fd(char *s, int fd)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Outputs the string at the given descriptor. | line to output | file descriptor | None
+
+### [ft_putendl_fd](libft/src/ft_putendl_fd.c)
+
+`void	    ft_putendl_fd (char *s, int fd)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Outputs the line at the given descriptor with a carriage return. | line to output | file descriptor | None
+
+### [ft_putnbr_fd](libft/src/ft_putnbr_fd.c)
+
+`void	    ft_putnbr_fd(int n, int fd)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Outputs a number at the given descriptor. | number to output | file descriptor | None
 
 
+## Bonus Functions
 
 
+### [ft_lstnew](libft/src_bonus/ft_lstnew.c)
+
+`t_list	*ft_lstnew(void *content)`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+Allocates memory for a new element and returns it. | The 'content' variable is initialized with the value of the 'content' parameter. | pointer to list
+
+### [ft_lstadd_front](libft/src_bonus/ft_lstadd_front.c)
+
+`void	ft_lstadd_front(t_list **lst, t_list *new)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Adds the element "new" to the beginning of the list. | the list to add the node to | node to add | None
+
+### [ft_lstsize](libft/src_bonus/ft_lstsize.c)
+
+`int	ft_lstsize(t_list *lst)`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+Counts the number of nodes in the list. | node counting list | number of nodes
+
+### [ft_lstlast](libft/src_bonus/ft_lstlast.c) 
+
+`t_list	*ft_lstlast(t_list *lst)`
+
+Description | Param. #1 | Return Value
+:-----------: | :-----------: | :-----------:
+Returns the last element of the list. | manipulated list | the last element of the list.
+
+### [ft_lstadd_back](libft/src_bonus/ft_lstadd_back.c)
+
+`void	ft_lstadd_back(t_list **lst, t_list *new)`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Adds a new element to the end of the list. | the list to add the node to | node to add | None
+
+### [ft_lstdelone](libft/src_bonus/ft_lstdelone.c)
+
+`void	ft_lstdelone(t_list *lst, void (*del)(void*))`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+It takes a list node as a parameter and frees the node's content memory using the 'del' function given as a parameter, and frees the memory for the element itself. | manipulation list | function to clear the contents of the node | None
+
+### [ft_lstclear](libft/src_bonus/ft_lstclear.c)
+
+`void	ft_lstclear(t_list **lst, void (*del)(void*))`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Removes and frees the given element and all its successors using the 'del' and free functions. The list pointer is set to NULL. | manipulation list | function to clear the contents of the node | None
+
+### [ft_lstiter](libft/src_bonus/ft_lstiter.c)
+
+`void	ft_lstiter(t_list *lst, void (*f)(void *))`
+
+Description | Param. #1 | Param. #2 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------:
+Iterates the list 'lst' and applies the 'f' function to the contents of each element. | manipulation list | function for each list node | None
+
+### [ft_lstmap](libft/src_bonus/ft_lstmap.c)
+
+`t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))`
+
+Description | Param. #1 | Param. #2 | Param. #3 | Return Value
+:-----------: | :-----------: | :-----------: | :-----------: | :-----------:
+Iterates the list 'lst' and applies the 'f' function to the contents of each element. Creates a new list as a result of successive applications of the 'f' function. | manipulation list | function for each list node | The 'del' function is used to remove the contents of an element, if necessary. | pointer to new list
 
 
-
+## Personal Functions
 
 
 ### [ft_islower](libft/src/ft_islower.c)
@@ -379,22 +483,3 @@ Description | Param. #1 | Return Value
 
 
 
-
-
-
-
-
-
-
-
-### [ft_capitalize](libft/src/ft_capitalize.c)
-
-`char  *ft_capitalize(char *s)`
-
-Description | Param. #1 | Return Value
-:-----------: | :-----------: | :-----------:
-Capitalizes the first letter of every word in a string	| The string to capitalize		| The new string with capitalized words 
-
-
-[1]: https://www.42madrid.com/ 
-[2]:
