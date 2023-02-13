@@ -1,5 +1,5 @@
 <h1 align="center">
-	:books: ft_printf
+	:books: Lib_ft
 </h1>
 
 ### TOC
