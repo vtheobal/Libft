@@ -1,5 +1,5 @@
 <h1 align="center">
-	:books: Lib_ft
+	:books: Libft
 </h1>
 
 ### TOC
