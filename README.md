@@ -1,4 +1,6 @@
-# Libft
+<h1 align="center">
+	:books: ft_printf
+</h1>
 
 ### TOC
 * [What is libft?](#what-is-libft)
